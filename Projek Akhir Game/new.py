@@ -172,11 +172,14 @@ while True:
         gravity = 0
         score_massage = test_font.render(f'Your score: {nilai}',False,white)
         score_massage_rect = score_massage.get_rect(center = (640,550))
+        massage_End = test_font.render('Press Space to play again',False,white)
+        massage_End_rect = massage_End.get_rect(center = (640,620))
         pygame.mixer.music.play(-1)
         if nilai == 0:
             screen.blit(massage,massage_rect)
         else:
-            screen.blit(score_massage,score_massage_rect) 
+            screen.blit(score_massage,score_massage_rect)
+            screen.blit(massage_End, massage_End_rect)
         
     # currentframe = (currentframe + 1) % frame
     pygame.display.update()
